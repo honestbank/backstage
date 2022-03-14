@@ -1,5 +1,14 @@
 # @backstage/plugin-bazaar-backend
 
+## 0.1.14
+
+### Patch Changes
+
+- efc73db10c: Use `better-sqlite3` instead of `@vscode/sqlite3`
+- Updated dependencies
+  - @backstage/backend-common@0.13.1
+  - @backstage/backend-test-utils@0.1.22
+
 ## 0.1.13
 
 ### Patch Changes

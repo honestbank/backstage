@@ -1,5 +1,12 @@
 # @backstage/cli
 
+## 0.15.4
+
+### Patch Changes
+
+- 947ae3b40e: Applied the fix from version `0.15.3` of this package, which is part of the `v0.71.1` release of Backstage.
+- 19eed0edd9: Fix for `overrides` not being properly forwarded from the extra configuration passed to `@backstage/cli/config/eslint-factory`.
+
 ## 0.15.3
 
 ### Patch Changes

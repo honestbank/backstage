@@ -1,5 +1,24 @@
 # @backstage/plugin-catalog-backend
 
+## 0.25.0
+
+### Minor Changes
+
+- 02ad19d189: **BREAKING**: Removed the deprecated `metadata.generation` field entirely. It is no longer present in TS types, nor in the REST API output. Entities that have not yet been re-stitched may still have the field present for some time, but it will get phased out gradually by your catalog instance.
+- d3e9ec43b7: **BREAKING**: Removed the `target` property from `EntityRelation`. This field has been replaced by `targetRef`.
+  This means that `target: { name: 'team-a', kind: 'group', namespace: 'default' }` is now replaced with `targetRef: 'group:default/team-a'` in entity relations.
+
+  The entities API endpoint still return the old `target` field for to ease transitions, however the future removal of this field will be considered non breaking.
+
+### Patch Changes
+
+- efc73db10c: Use `better-sqlite3` instead of `@vscode/sqlite3`
+- Updated dependencies
+  - @backstage/backend-common@0.13.1
+  - @backstage/catalog-model@0.14.0
+  - @backstage/catalog-client@0.9.1
+  - @backstage/plugin-scaffolder-common@0.3.1
+
 ## 0.24.0
 
 ### Minor Changes

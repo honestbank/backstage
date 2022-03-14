@@ -1,5 +1,12 @@
 # @backstage/backend-common
 
+## 0.13.1
+
+### Patch Changes
+
+- efc73db10c: Use `better-sqlite3` instead of `@vscode/sqlite3`
+- b66f70180f: Fix handling of bucket names with dots, in `AwsS3UrlReader`
+
 ## 0.13.0
 
 ### Minor Changes

@@ -42,7 +42,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@backstage/cli": "^0.15.2-next.0",
+    "@backstage/cli": "^0.15.3",
     "@backstage/config-loader": "^0.9.7-next.0",
     "@backstage/test-utils": "^0.3.0",
     "@types/jest": "^26.0.7",
