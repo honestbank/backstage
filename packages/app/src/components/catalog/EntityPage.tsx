@@ -135,6 +135,15 @@ import {
   EntityNewRelicDashboardCard,
 } from '@backstage/plugin-newrelic-dashboard';
 import { EntityGoCdContent, isGoCdAvailable } from '@backstage/plugin-gocd';
+import { EntitySonarQubeCard } from '@backstage/plugin-sonarqube';
+import {
+  EntityArgoCDOverviewCard,
+  isArgocdAvailable,
+} from '@roadiehq/backstage-plugin-argo-cd';
+import {
+  EntityGrafanaAlertsCard,
+  EntityGrafanaDashboardsCard,
+} from '@k-phoen/backstage-plugin-grafana';
 
 import React, { ReactNode, useMemo, useState } from 'react';
 
@@ -302,6 +311,30 @@ const overviewContent = (
     <Grid item md={6} xs={12}>
       <EntityCatalogGraphCard variant="gridItem" height={400} />
     </Grid>
+
+    <Grid item md={6}>
+      <EntitySonarQubeCard variant="gridItem" />
+    </Grid>
+
+    <Grid item md={6}>
+      {/* Grafana alert card start */}
+      <EntityGrafanaAlertsCard />
+      {/* Grafana alert card end */}
+    </Grid>
+
+    <Grid item md={6}>
+      {/* Grafana alert card start */}
+      <EntityGrafanaDashboardsCard />
+      {/* Grafana alert card end */}
+    </Grid>
+
+    <EntitySwitch>
+      <EntitySwitch.Case if={e => Boolean(isArgocdAvailable(e))}>
+        <Grid item sm={4}>
+          <EntityArgoCDOverviewCard />
+        </Grid>
+      </EntitySwitch.Case>
+    </EntitySwitch>
 
     <EntitySwitch>
       <EntitySwitch.Case if={isPagerDutyAvailable}>

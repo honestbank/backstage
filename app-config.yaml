@@ -114,6 +114,26 @@ proxy:
     allowedHeaders: ['Authorization']
     headers:
       Authorization: Basic ${GOCD_AUTH_CREDENTIALS}
+  '/sonarqube':
+    target: https://sonarcloud.io/api
+    allowedMethods: ['GET']
+    # note that the colon after the token is required
+    auth: '${SONARQUBE_TOKEN}:'
+    # Environmental variable: SONARQUBE_TOKEN
+    # Fetch the sonar-auth-token from https://sonarcloud.io/account/security/
+  '/argocd/api':
+    target: https://<your-argocd-instance>/api/v1/
+    changeOrigin: true
+    # only if your argocd api has self-signed cert
+    secure: false
+    headers:
+      Cookie:
+        $env: ARGOCD_AUTH_TOKEN
+  '/grafana/api':
+    # May be an internal DNS
+    target: https://grafana.host/
+    headers:
+      Authorization: Bearer ${GRAFANA_TOKEN}
 
 organization:
   name: My Company
@@ -456,3 +476,7 @@ apacheAirflow:
 
 gocd:
   baseUrl: https://your.gocd.instance.com
+
+grafana:
+  # Publicly accessible domain
+  domain: https://monitoring.company.com
