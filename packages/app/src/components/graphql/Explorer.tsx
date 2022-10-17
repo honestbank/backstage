@@ -15,12 +15,21 @@
  */
 import {ApolloExplorer} from '@apollo/explorer/react'
 import React from 'react'
+import {makeStyles} from "@material-ui/core";
+
+const useExplorerStyles = makeStyles({
+  explorer: {
+    height: '100vh'
+  }
+});
+
 
 export const Explorer = (props: {stage: 'test' | 'dev' | 'qa' | 'prod'}): JSX.Element => {
+  const explorerStyles = useExplorerStyles();
   return (
     <ApolloExplorer
       graphRef={`Honest-API@${props.stage}`}
-      className="Explorer"
+      className={explorerStyles.explorer}
       persistExplorerState
       initialState={{displayOptions: {theme: 'light', docsPanelState: 'open', showHeadersAndEnvVars: true}}}
       handleRequest={ async (endpointUrl, options): Promise<Response> => {
