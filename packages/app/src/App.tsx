@@ -75,7 +75,7 @@ import { hot } from 'react-hot-loader/root';
 import { Navigate, Route } from 'react-router';
 import { apis } from './apis';
 import { entityPage } from './components/catalog/EntityPage';
-import { Explorer } from './components/graphql/Explorer'
+import { Explorer } from './components/graphql/Explorer';
 import { HomePage } from './components/home/HomePage';
 import { Root } from './components/Root';
 import { LowerCaseValuePickerFieldExtension } from './components/scaffolder/customScaffolderExtensions';
