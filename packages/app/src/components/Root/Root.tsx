@@ -106,7 +106,10 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
             to="cost-insights"
             text="Cost Insights"
           />
-          <SidebarItem icon={GraphiQLIcon} to="graphiql" text="GraphiQL" />
+          <SidebarItem icon={GraphiQLIcon} to="graphql_test" text="GraphQL (test)" />
+          <SidebarItem icon={GraphiQLIcon} to="graphql_dev" text="GraphQL (dev)" />
+          <SidebarItem icon={GraphiQLIcon} to="graphql_qa" text="GraphQL (qa)" />
+          <SidebarItem icon={GraphiQLIcon} to="graphql_prod" text="GraphQL (prod)" />
         </SidebarScrollWrapper>
         <SidebarDivider />
         <Shortcuts />
