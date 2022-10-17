@@ -1358,6 +1358,57 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
 
+"@backstage/backend-common@^0.13.1":
+  version "0.13.1"
+  resolved "https://registry.npmjs.org/@backstage/backend-common/-/backend-common-0.13.1.tgz#dd0ffd29b375b3d79dcf735c1700b4cd6f90ad35"
+  integrity sha512-bZYj5WVGIsel6chK2EesBsACVmozAgTuODcsGo36eT5uxCl97WlQS7F8yBZyuBi6YunAwlQje28aH6+kHvijdA==
+  dependencies:
+    "@backstage/cli-common" "^0.1.8"
+    "@backstage/config" "^1.0.0"
+    "@backstage/config-loader" "^1.0.0"
+    "@backstage/errors" "^1.0.0"
+    "@backstage/integration" "^1.0.0"
+    "@backstage/types" "^1.0.0"
+    "@google-cloud/storage" "^5.8.0"
+    "@keyv/redis" "^2.2.3"
+    "@manypkg/get-packages" "^1.1.3"
+    "@octokit/rest" "^18.5.3"
+    "@types/cors" "^2.8.6"
+    "@types/dockerode" "^3.3.0"
+    "@types/express" "^4.17.6"
+    "@types/luxon" "^2.0.4"
+    archiver "^5.0.2"
+    aws-sdk "^2.840.0"
+    compression "^1.7.4"
+    concat-stream "^2.0.0"
+    cors "^2.8.5"
+    dockerode "^3.3.1"
+    express "^4.17.1"
+    express-promise-router "^4.1.0"
+    fs-extra "10.0.1"
+    git-url-parse "^11.6.0"
+    helmet "^5.0.2"
+    isomorphic-git "^1.8.0"
+    jose "^1.27.1"
+    keyv "^4.0.3"
+    keyv-memcache "^1.2.5"
+    knex "^1.0.2"
+    lodash "^4.17.21"
+    logform "^2.3.2"
+    luxon "^2.0.2"
+    minimatch "^5.0.0"
+    minimist "^1.2.5"
+    morgan "^1.10.0"
+    node-abort-controller "^3.0.1"
+    node-fetch "^2.6.7"
+    raw-body "^2.4.1"
+    selfsigned "^2.0.0"
+    stoppable "^1.1.0"
+    tar "^6.1.2"
+    unzipper "^0.10.11"
+    winston "^3.2.1"
+    yn "^4.0.0"
+
 "@backstage/catalog-client@^0.7.0":
   version "0.7.2"
   resolved "https://registry.npmjs.org/@backstage/catalog-client/-/catalog-client-0.7.2.tgz#bcfdb2c210e878fbc5833f18e59feae1e7e48330"
@@ -1374,6 +1425,15 @@
   dependencies:
     "@backstage/catalog-model" "^0.12.0"
     "@backstage/errors" "^0.2.2"
+    cross-fetch "^3.1.5"
+
+"@backstage/catalog-client@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@backstage/catalog-client/-/catalog-client-1.0.0.tgz#05f9ee3b771ca17e4800f5116d63bd183fe0c4d6"
+  integrity sha512-m2FiV9+gQElYrZMICFpr3Dj7H34as9Jly1onF/yFhKi4DSovZpgemTG6I0KQuNuEwmrqYTkTd6kDDYvpUis9Ow==
+  dependencies:
+    "@backstage/catalog-model" "^1.0.0"
+    "@backstage/errors" "^1.0.0"
     cross-fetch "^3.1.5"
 
 "@backstage/catalog-model@^0.10.0":
@@ -1432,6 +1492,48 @@
     lodash "^4.17.21"
     uuid "^8.0.0"
     yup "^0.32.9"
+
+"@backstage/catalog-model@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@backstage/catalog-model/-/catalog-model-1.0.0.tgz#0aa8694a3182aaf4232725842da751bf5f78bd68"
+  integrity sha512-hjvTzs+P1/TG42FhX6jJvRIBbYZJC0vE9Qqn9MTb4n8vaoZuBT5jYTnK6K80gpEyNfbznpD5vsE8ss5lmzWz+Q==
+  dependencies:
+    "@backstage/config" "^1.0.0"
+    "@backstage/errors" "^1.0.0"
+    "@backstage/types" "^1.0.0"
+    ajv "^7.0.3"
+    json-schema "^0.4.0"
+    lodash "^4.17.21"
+    uuid "^8.0.0"
+
+"@backstage/config-loader@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@backstage/config-loader/-/config-loader-1.0.0.tgz#cb4ffed427149e787ed9a5d694b5c3c49c8e31bb"
+  integrity sha512-gSC3hE+7oxXwWasuEBUOkX48ka84aZ8tQBUieU4NsP0R/b7YRspiE0bcynxsi9wzhwo2/waGy39iPnCqZRD6bg==
+  dependencies:
+    "@backstage/cli-common" "^0.1.8"
+    "@backstage/config" "^1.0.0"
+    "@backstage/errors" "^1.0.0"
+    "@backstage/types" "^1.0.0"
+    "@types/json-schema" "^7.0.6"
+    ajv "^7.0.3"
+    chokidar "^3.5.2"
+    fs-extra "10.0.1"
+    json-schema "^0.4.0"
+    json-schema-merge-allof "^0.8.1"
+    json-schema-traverse "^1.0.0"
+    node-fetch "^2.6.7"
+    typescript-json-schema "^0.53.0"
+    yaml "^1.9.2"
+    yup "^0.32.9"
+
+"@backstage/config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@backstage/config/-/config-1.0.0.tgz#7af40758ae3f8e1d9ef3a07f063a1fd9cf5c364e"
+  integrity sha512-0M8UPHjCev3i/Puz/DGV7hor/vujx27bpWip5UTjachzBorI5xB0CBV1GfZ1UZMm5R5py7RJ+lKdmSJVFdw9IA==
+  dependencies:
+    "@backstage/types" "^1.0.0"
+    lodash "^4.17.21"
 
 "@backstage/core-components@^0.8.0", "@backstage/core-components@^0.8.9":
   version "0.8.10"
@@ -1503,6 +1605,15 @@
     react-router-dom "6.0.0-beta.0"
     zen-observable "^0.8.15"
 
+"@backstage/errors@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@backstage/errors/-/errors-1.0.0.tgz#08ebf53afdeaca32362955ea8551e8ffa0bb3cd7"
+  integrity sha512-2SpjdhH9ZOQ4RGEeu3/A7ARkl/1E9E6uBGQZ2DZOU4azTK1UZG/HE1KBMOThp3jL/8is2vOIJZLBA3r3DxLfVw==
+  dependencies:
+    "@backstage/types" "^1.0.0"
+    cross-fetch "^3.1.5"
+    serialize-error "^8.0.1"
+
 "@backstage/integration@^0.7.3":
   version "0.7.5"
   resolved "https://registry.npmjs.org/@backstage/integration/-/integration-0.7.5.tgz#c68848f35db51705b3287b6fa6a259ae4b17bfbc"
@@ -1515,6 +1626,96 @@
     git-url-parse "^11.6.0"
     lodash "^4.17.21"
     luxon "^2.0.2"
+
+"@backstage/integration@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@backstage/integration/-/integration-1.0.0.tgz#e307cfddea014bfb0eb2281a5ae25ea0b742e9cf"
+  integrity sha512-DpEoSCQyurLSNGLAAfZzwb8IGEoxm6po6ZkKq9Gt9I63NbLhixBEnCcoPbm5+ld4MVNwg+FgzIoktsjdBt3JIw==
+  dependencies:
+    "@backstage/config" "^1.0.0"
+    "@octokit/auth-app" "^3.4.0"
+    "@octokit/rest" "^18.5.3"
+    cross-fetch "^3.1.5"
+    git-url-parse "^11.6.0"
+    lodash "^4.17.21"
+    luxon "^2.0.2"
+
+"@backstage/plugin-auth-node@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.npmjs.org/@backstage/plugin-auth-node/-/plugin-auth-node-0.1.6.tgz#a827f556143f280fe8c44ae70c5efc72a08a8819"
+  integrity sha512-y4cMV/RtAT5bywTUHfF+m8ehiDLw3AK8SmnhnCt9bYiyVqi4totU2pdnM1yk6CtoiobLWN5V9HdSUL8O4/Ystg==
+  dependencies:
+    "@backstage/backend-common" "^0.13.1"
+    "@backstage/catalog-model" "^1.0.0"
+    "@backstage/config" "^1.0.0"
+    "@backstage/errors" "^1.0.0"
+    jose "^1.27.1"
+    node-fetch "^2.6.7"
+    winston "^3.2.1"
+
+"@backstage/plugin-catalog-backend-module-github@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.npmjs.org/@backstage/plugin-catalog-backend-module-github/-/plugin-catalog-backend-module-github-0.1.1.tgz#f59f5cde1faa1428d423a0bdfa83e5ffa8c285bc"
+  integrity sha512-T1tvRigAO66FvLxZUa503gn7Vj/CmDv3Nn+efZspZmTdHe31nZSLP+VMJNnjGK00BroQ62rKM/zxXfjdHygpPg==
+  dependencies:
+    "@backstage/backend-common" "^0.13.1"
+    "@backstage/catalog-model" "^1.0.0"
+    "@backstage/config" "^1.0.0"
+    "@backstage/errors" "^1.0.0"
+    "@backstage/integration" "^1.0.0"
+    "@backstage/plugin-catalog-backend" "^1.0.0"
+    "@backstage/types" "^1.0.0"
+    "@octokit/graphql" "^4.5.8"
+    lodash "^4.17.21"
+    msw "^0.35.0"
+    node-fetch "^2.6.7"
+    winston "^3.2.1"
+
+"@backstage/plugin-catalog-backend@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@backstage/plugin-catalog-backend/-/plugin-catalog-backend-1.0.0.tgz#96114e08e42c18fb8c6acb005955a1a101531a26"
+  integrity sha512-YFZpRiJPVl38wFbb/IM8Sb1xTdXfXhH3AHNhuO/M38l3I2ThkhJnkUt3QWA+mIyf0k2q0xtawvjJU/6pqwAo6A==
+  dependencies:
+    "@backstage/backend-common" "^0.13.1"
+    "@backstage/catalog-client" "^1.0.0"
+    "@backstage/catalog-model" "^1.0.0"
+    "@backstage/config" "^1.0.0"
+    "@backstage/errors" "^1.0.0"
+    "@backstage/integration" "^1.0.0"
+    "@backstage/plugin-catalog-common" "^1.0.0"
+    "@backstage/plugin-permission-common" "^0.5.3"
+    "@backstage/plugin-permission-node" "^0.5.5"
+    "@backstage/plugin-scaffolder-common" "^1.0.0"
+    "@backstage/plugin-search-common" "^0.3.2"
+    "@backstage/types" "^1.0.0"
+    "@types/express" "^4.17.6"
+    codeowners-utils "^1.0.2"
+    core-js "^3.6.5"
+    express "^4.17.1"
+    express-promise-router "^4.1.0"
+    fast-json-stable-stringify "^2.1.0"
+    fs-extra "10.0.1"
+    git-url-parse "^11.6.0"
+    glob "^7.1.6"
+    knex "^1.0.2"
+    lodash "^4.17.21"
+    luxon "^2.0.2"
+    node-fetch "^2.6.7"
+    p-limit "^3.0.2"
+    prom-client "^14.0.1"
+    uuid "^8.0.0"
+    winston "^3.2.1"
+    yaml "^1.9.2"
+    yn "^4.0.0"
+    zod "^3.11.6"
+
+"@backstage/plugin-catalog-common@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@backstage/plugin-catalog-common/-/plugin-catalog-common-1.0.0.tgz#02de0e044e55d328a7a66ed82d2756646338bf84"
+  integrity sha512-XKBMlh/2RMJ8Nkc6n/hYS07To+MVe2oCp3tHJpmXYzYe0Uc8nfE09iam26n9Kz/mtcmlIP2LJcjYW2mq1k2vnA==
+  dependencies:
+    "@backstage/plugin-permission-common" "^0.5.3"
+    "@backstage/search-common" "^0.3.2"
 
 "@backstage/plugin-catalog-react@^0.6.5":
   version "0.6.15"
@@ -1569,6 +1770,60 @@
     react-use "^17.2.4"
     yaml "^1.10.0"
     zen-observable "^0.8.15"
+
+"@backstage/plugin-permission-common@^0.5.3":
+  version "0.5.3"
+  resolved "https://registry.npmjs.org/@backstage/plugin-permission-common/-/plugin-permission-common-0.5.3.tgz#a1a4446e603584f2c82763745051f75f4a942eb1"
+  integrity sha512-zppDsNZEK9ffgXbf/Zx0sw4ffuOVOEvBZlft1+Oph2rO4+uN7dmCLMRRcKsYeNQ6/F50e6BMyNWpPZQDR/JQsA==
+  dependencies:
+    "@backstage/config" "^1.0.0"
+    "@backstage/errors" "^1.0.0"
+    cross-fetch "^3.1.5"
+    uuid "^8.0.0"
+    zod "^3.11.6"
+
+"@backstage/plugin-permission-node@^0.5.5":
+  version "0.5.5"
+  resolved "https://registry.npmjs.org/@backstage/plugin-permission-node/-/plugin-permission-node-0.5.5.tgz#df30428c872b0bf3d95df9826d681cd6c1d6e191"
+  integrity sha512-K7vyeLZLeDAiWHp9Xwhd33knlKuph2NnJmdz/M7gLh/TqevIRz82MS0qtXGfJ8ML8fhUm3VCAKdFpgJzEWO9EQ==
+  dependencies:
+    "@backstage/backend-common" "^0.13.1"
+    "@backstage/config" "^1.0.0"
+    "@backstage/errors" "^1.0.0"
+    "@backstage/plugin-auth-node" "^0.1.6"
+    "@backstage/plugin-permission-common" "^0.5.3"
+    "@types/express" "^4.17.6"
+    express "^4.17.1"
+    express-promise-router "^4.1.0"
+    zod "^3.11.6"
+
+"@backstage/plugin-scaffolder-common@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@backstage/plugin-scaffolder-common/-/plugin-scaffolder-common-1.0.0.tgz#614a4d5d0c3ab4bd507cd0dd9e8ab7b07a8e6872"
+  integrity sha512-vmlpdkbfMGiVycyyKYPeiDRzXJO/ruoMtsFLi1BTw/w5FXKB4NmP/+nUWomXC212ZjUqKvCza3OcpBgI5PztTw==
+  dependencies:
+    "@backstage/catalog-model" "^1.0.0"
+    "@backstage/types" "^1.0.0"
+
+"@backstage/plugin-search-common@0.3.2", "@backstage/plugin-search-common@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.npmjs.org/@backstage/plugin-search-common/-/plugin-search-common-0.3.2.tgz#15984ba4c14f8a9119168e8c79344ef8101863dc"
+  integrity sha512-7vcpRo+5MB/QW/M77zPfcqxw0LzcQCHNXql0uxF+qBwVPJSHz9QB+YBuzGyaAlqfm5UPFXuweLQGqtoB+0DMLg==
+  dependencies:
+    "@backstage/plugin-permission-common" "^0.5.3"
+    "@backstage/types" "^1.0.0"
+
+"@backstage/search-common@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.npmjs.org/@backstage/search-common/-/search-common-0.3.2.tgz#608a4eddf7eae71ed807ec1f723a80c6f7cdf3e4"
+  integrity sha512-CvkgpVnMrDJsZghsJiMjOWGf5O/9fROsGHnv24EHK8h724nShieALfyawfKsScnpjDLDXU0TIZFDGuXiP/wIUw==
+  dependencies:
+    "@backstage/plugin-search-common" "0.3.2"
+
+"@backstage/types@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@backstage/types/-/types-1.0.0.tgz#3c4cc1487d30d113250fc530238aae0a2ba0e58c"
+  integrity sha512-x5650F/lXUO1Bo++Eg1T9vreuIzlOeljxTUCP6mxqOGgOWr8yBku42HiHX6KE80OpckFDTUyKtEWqboclfKUkg==
 
 "@bcoe/v8-coverage@^0.2.3":
   version "0.2.3"
@@ -24517,12 +24772,25 @@ typescript-json-schema@^0.52.0:
     typescript "~4.4.4"
     yargs "^17.1.1"
 
+typescript-json-schema@^0.53.0:
+  version "0.53.0"
+  resolved "https://registry.npmjs.org/typescript-json-schema/-/typescript-json-schema-0.53.0.tgz#ac5b89e4b0af55be422f475a041360e0556f88ea"
+  integrity sha512-BcFxC9nipQQOXxrBGI/jOWU31BwzVh6vqJR008G8VHKJtQ8YrZX6veriXfTK1l+L0/ff0yKl3mZigMLA6ZqkHg==
+  dependencies:
+    "@types/json-schema" "^7.0.9"
+    "@types/node" "^16.9.2"
+    glob "^7.1.7"
+    safe-stable-stringify "^2.2.0"
+    ts-node "^10.2.1"
+    typescript "~4.5.0"
+    yargs "^17.1.1"
+
 typescript@~4.4.4:
   version "4.4.4"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.4.4.tgz#2cd01a1a1f160704d3101fd5a58ff0f9fcb8030c"
   integrity sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==
 
-typescript@~4.5.2, typescript@~4.5.4:
+typescript@~4.5.0, typescript@~4.5.2, typescript@~4.5.4:
   version "4.5.5"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.5.5.tgz#d8c953832d28924a9e3d37c73d729c846c5896f3"
   integrity sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==
