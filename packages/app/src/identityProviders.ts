@@ -14,13 +14,9 @@
  * limitations under the License.
  */
 
-import {
-  googleAuthApiRef,
-  githubAuthApiRef
-} from '@backstage/core-plugin-api';
+import { googleAuthApiRef, githubAuthApiRef } from '@backstage/core-plugin-api';
 
 export const providers = [
-  'guest',
   {
     id: 'google-auth-provider',
     title: 'Google',
@@ -32,5 +28,5 @@ export const providers = [
     title: 'GitHub',
     message: 'Sign In using GitHub',
     apiRef: githubAuthApiRef,
-  }
+  },
 ];
