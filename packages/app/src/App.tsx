@@ -53,7 +53,6 @@ import {
 import { orgPlugin } from '@backstage/plugin-org';
 import { ExplorePage } from '@backstage/plugin-explore';
 import { GcpProjectsPage } from '@backstage/plugin-gcp-projects';
-import { GraphiQLPage } from '@backstage/plugin-graphiql';
 import { HomepageCompositionRoot } from '@backstage/plugin-home';
 import { LighthousePage } from '@backstage/plugin-lighthouse';
 import { NewRelicPage } from '@backstage/plugin-newrelic';
@@ -76,6 +75,7 @@ import { hot } from 'react-hot-loader/root';
 import { Navigate, Route } from 'react-router';
 import { apis } from './apis';
 import { entityPage } from './components/catalog/EntityPage';
+import { Explorer } from './components/graphql/Explorer';
 import { HomePage } from './components/home/HomePage';
 import { Root } from './components/Root';
 import { LowerCaseValuePickerFieldExtension } from './components/scaffolder/customScaffolderExtensions';
@@ -198,7 +198,10 @@ const routes = (
       path="/tech-radar"
       element={<TechRadarPage width={1500} height={800} />}
     />
-    <Route path="/graphiql" element={<GraphiQLPage />} />
+    <Route path="/graphql_test" element={<Explorer stage="test" />} />
+    <Route path="/graphql_dev" element={<Explorer stage="test" />} />
+    <Route path="/graphql_qa" element={<Explorer stage="test" />} />
+    <Route path="/graphql_prod" element={<Explorer stage="test" />} />
     <Route path="/lighthouse" element={<LighthousePage />} />
     <Route path="/api-docs" element={<ApiExplorerPage />} />
     <Route path="/gcp-projects" element={<GcpProjectsPage />} />

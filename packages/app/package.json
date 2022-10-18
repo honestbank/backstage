@@ -7,6 +7,7 @@
   },
   "bundled": true,
   "dependencies": {
+    "@apollo/explorer": "^1.2.0",
     "@backstage/app-defaults": "^0.2.1",
     "@backstage/catalog-model": "^0.13.0",
     "@backstage/cli": "^0.15.2",
@@ -74,7 +75,9 @@
     "react-router": "6.0.0-beta.0",
     "react-router-dom": "6.0.0-beta.0",
     "react-use": "^17.2.4",
-    "zen-observable": "^0.8.15"
+    "use-deep-compare-effect": "^1.8.1",
+    "zen-observable": "^0.8.15",
+    "zen-observable-ts": "^1.1.0"
   },
   "devDependencies": {
     "@backstage/plugin-permission-react": "^0.3.3",
