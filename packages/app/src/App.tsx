@@ -62,7 +62,6 @@ import {
   scaffolderPlugin,
 } from '@backstage/plugin-scaffolder';
 import { SearchPage } from '@backstage/plugin-search';
-import { TechRadarPage } from '@backstage/plugin-tech-radar';
 import {
   TechDocsIndexPage,
   techdocsPlugin,
@@ -194,15 +193,10 @@ const routes = (
       </ScaffolderFieldExtensions>
     </Route>
     <Route path="/explore" element={<ExplorePage />} />
-    <Route
-      path="/tech-radar"
-      element={<TechRadarPage width={1500} height={800} />}
-    />
     <Route path="/graphql_test" element={<Explorer stage="test" />} />
     <Route path="/graphql_dev" element={<Explorer stage="test" />} />
     <Route path="/graphql_qa" element={<Explorer stage="test" />} />
     <Route path="/graphql_prod" element={<Explorer stage="test" />} />
-    <Route path="/lighthouse" element={<LighthousePage />} />
     <Route path="/api-docs" element={<ApiExplorerPage />} />
     <Route path="/gcp-projects" element={<GcpProjectsPage />} />
     <Route path="/newrelic" element={<NewRelicPage />} />
