@@ -45,11 +45,6 @@ import {
   CatalogImportPage,
   catalogImportPlugin,
 } from '@backstage/plugin-catalog-import';
-import {
-  CostInsightsLabelDataflowInstructionsPage,
-  CostInsightsPage,
-  CostInsightsProjectGrowthInstructionsPage,
-} from '@backstage/plugin-cost-insights';
 import { orgPlugin } from '@backstage/plugin-org';
 import { ExplorePage } from '@backstage/plugin-explore';
 import { GcpProjectsPage } from '@backstage/plugin-gcp-projects';
@@ -203,15 +198,6 @@ const routes = (
     <Route path="/search" element={<SearchPage />}>
       {searchPage}
     </Route>
-    <Route path="/cost-insights" element={<CostInsightsPage />} />
-    <Route
-      path="/cost-insights/investigating-growth"
-      element={<CostInsightsProjectGrowthInstructionsPage />}
-    />
-    <Route
-      path="/cost-insights/labeling-jobs"
-      element={<CostInsightsLabelDataflowInstructionsPage />}
-    />
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/azure-pull-requests" element={<AzurePullRequestsPage />} />
     <Route path="/apache-airflow" element={<ApacheAirflowPage />} />
