@@ -45,11 +45,6 @@ import {
   CatalogImportPage,
   catalogImportPlugin,
 } from '@backstage/plugin-catalog-import';
-import {
-  CostInsightsLabelDataflowInstructionsPage,
-  CostInsightsPage,
-  CostInsightsProjectGrowthInstructionsPage,
-} from '@backstage/plugin-cost-insights';
 import { orgPlugin } from '@backstage/plugin-org';
 import { ExplorePage } from '@backstage/plugin-explore';
 import { GcpProjectsPage } from '@backstage/plugin-gcp-projects';
@@ -62,7 +57,6 @@ import {
   scaffolderPlugin,
 } from '@backstage/plugin-scaffolder';
 import { SearchPage } from '@backstage/plugin-search';
-import { TechRadarPage } from '@backstage/plugin-tech-radar';
 import {
   TechDocsIndexPage,
   techdocsPlugin,
@@ -194,30 +188,16 @@ const routes = (
       </ScaffolderFieldExtensions>
     </Route>
     <Route path="/explore" element={<ExplorePage />} />
-    <Route
-      path="/tech-radar"
-      element={<TechRadarPage width={1500} height={800} />}
-    />
     <Route path="/graphql_test" element={<Explorer stage="test" />} />
     <Route path="/graphql_dev" element={<Explorer stage="test" />} />
     <Route path="/graphql_qa" element={<Explorer stage="test" />} />
     <Route path="/graphql_prod" element={<Explorer stage="test" />} />
-    <Route path="/lighthouse" element={<LighthousePage />} />
     <Route path="/api-docs" element={<ApiExplorerPage />} />
     <Route path="/gcp-projects" element={<GcpProjectsPage />} />
     <Route path="/newrelic" element={<NewRelicPage />} />
     <Route path="/search" element={<SearchPage />}>
       {searchPage}
     </Route>
-    <Route path="/cost-insights" element={<CostInsightsPage />} />
-    <Route
-      path="/cost-insights/investigating-growth"
-      element={<CostInsightsProjectGrowthInstructionsPage />}
-    />
-    <Route
-      path="/cost-insights/labeling-jobs"
-      element={<CostInsightsLabelDataflowInstructionsPage />}
-    />
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/azure-pull-requests" element={<AzurePullRequestsPage />} />
     <Route path="/apache-airflow" element={<ApacheAirflowPage />} />
