@@ -49,7 +49,6 @@ import { orgPlugin } from '@backstage/plugin-org';
 import { ExplorePage } from '@backstage/plugin-explore';
 import { GcpProjectsPage } from '@backstage/plugin-gcp-projects';
 import { HomepageCompositionRoot } from '@backstage/plugin-home';
-import { LighthousePage } from '@backstage/plugin-lighthouse';
 import { NewRelicPage } from '@backstage/plugin-newrelic';
 import {
   ScaffolderFieldExtensions,
