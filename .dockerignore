@@ -1,8 +1,8 @@
 .git
-docs
-cypress
-microsite
+.yarn/cache
+.yarn/install-state.gz
 node_modules
-packages
-!packages/backend/dist
+packages/*/src
+packages/*/node_modules
 plugins
+*.local.yaml

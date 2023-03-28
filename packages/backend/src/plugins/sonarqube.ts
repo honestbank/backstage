@@ -1,4 +1,7 @@
-import { createRouter } from '@backstage/plugin-proxy-backend';
+import {
+  createRouter,
+  DefaultSonarqubeInfoProvider,
+} from '@backstage/plugin-sonarqube-backend';
 import { Router } from 'express';
 import { PluginEnvironment } from '../types';
 
@@ -7,7 +10,6 @@ export default async function createPlugin(
 ): Promise<Router> {
   return await createRouter({
     logger: env.logger,
-    config: env.config,
-    discovery: env.discovery,
+    sonarqubeInfoProvider: DefaultSonarqubeInfoProvider.fromConfig(env.config),
   });
 }
